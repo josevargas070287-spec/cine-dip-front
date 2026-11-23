@@ -9,7 +9,8 @@ import { useAuth } from './context/auth-context';
  * queria entrar, para volver ahi despues de iniciar sesion.
  */
 export const RequireAuth = () => {
-  const { isAuthenticated, loading } = useAuth();
+  //const { isAuthenticated, loading } = useAuth();
+  const { isAuthenticated, loading, tieneRol } = useAuth();
   const location = useLocation();
 
   if (loading) {
@@ -24,6 +25,8 @@ export const RequireAuth = () => {
       />
     );
   }
-
+  if (!tieneRol('ADMINISTRADOR', 'ADMIN', 'GERENTE')) {
+    return <Navigate to="/peliculas" replace />;
+  }
   return <Outlet />;
 };

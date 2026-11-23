@@ -35,3 +35,13 @@ export interface Asiento {
     activo: boolean;
     disponible: boolean;
 }
+
+export interface CrearFuncion {
+    idPelicula: number;
+    idSala: number;
+    fecha: string;
+    horaInicio: string;
+    horaFin: string;
+    precio: number;
+    estado: string;
+}

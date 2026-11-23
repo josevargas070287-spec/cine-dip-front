@@ -28,3 +28,7 @@ dist-ssr
 .env
 .env.local
 CLAUDE.md
+# Archivos temporales y respaldos
+src_temp/
+src.zip
+SKILL.md

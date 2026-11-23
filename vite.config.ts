@@ -14,4 +14,12 @@ export default defineConfig({
   build: {
     chunkSizeWarningLimit: 3000,
   },
+  server: {
+    host: '0.0.0.0',
+    allowedHosts: [
+      'cine-dev.com',
+      'www.cine-dev.com',
+    ],
+  },
 });
+

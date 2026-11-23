@@ -20,3 +20,13 @@ export interface PersonaCreada {
    telefono: string;
   },
 }
+
+export interface Persona {
+  id: number;
+  nombres: string;
+  apellidos: string;
+  documento: string;
+  telefono: string;
+  email: string;
+  fechaNacimiento: string;
+}
